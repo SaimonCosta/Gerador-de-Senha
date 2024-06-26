@@ -5,17 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas - a2ti</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="icon" href="./assets/logo.png type="image/png">
-
+    <link rel="icon" href="./assets/logo.png" type="image/png">
 </head>
-<body>    
-</div>
+<body>
     <div class="container">
-        <img src="./assets/logo.png "alt="logo-a2ti" class="a2ti">
+        <img src="./assets/logo.png" alt="logo-a2ti" class="a2ti">
         <h1>Gerador de Senhas</h1>
-        <div class="password-output" id="password-output">Sua senha aparecerá aqui 
-        </div>
-        
+        <div class="password-output" id="password-output">Sua senha aparecerá aqui</div>
         <div class="controls">
             <label>
                 Número de caracteres da senha: <span id="length-value">12</span>
@@ -44,8 +40,11 @@
                 Símbolos
             </label>
             <button id="generate-button">Gerar Senha</button>
+            <button id="copy-button">Copiar Senha</button>
+            
         </div>
+        <div id="alert-popup" class="alert-popup">Senha copiada com sucesso!</div>
     </div>
-    <script src="./gerador-de-senha/style/functions.js"></script>
+    <script src="./style/functions.js"></script>
 </body>
 </html>

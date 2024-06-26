@@ -13,6 +13,10 @@ document.getElementById('generate-button').addEventListener('click', function() 
     document.getElementById('password-output').textContent = password;
 });
 
+document.getElementById('copy-button').addEventListener('click', function() {
+    CopyPassword('password-output');
+});
+
 function generatePassword(length, useUppercase, useLowercase, useNumbers, useSymbols) {
     const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
@@ -37,4 +41,26 @@ function generatePassword(length, useUppercase, useLowercase, useNumbers, useSym
     }
 
     return password;
+}
+
+function CopyPassword(id) {
+    let r = document.createRange();
+    r.selectNode(document.getElementById(id));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    try {
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        showAlert();
+    } catch (err) {
+        console.log('Não foi possível copiar');
+    }
+}
+
+function showAlert() {
+    const alertPopup = document.getElementById('alert-popup');
+    alertPopup.classList.add('show');
+    setTimeout(() => {
+        alertPopup.classList.remove('show');
+    }, 3000); // O pop-up será exibido por 3 segundos
 }
