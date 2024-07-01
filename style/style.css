@@ -31,7 +31,7 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     background:#ffffff;
-    padding: 10px;
+    padding: 9.5px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -40,11 +40,13 @@ h1 {
     color: #111111;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .controls {
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 label {
@@ -138,11 +140,13 @@ button:hover {
 }
 
 #copy-button {
-    margin-left: 90%;
     cursor: pointer;
 }
 
-.container-copy{
-    border: 2px solid red;
 
+.icone-copy{
+    border: 2px solid ;
+    width: 10%;
+    margin-left: 94.2%;
+    margin-top: -16%;
 }
